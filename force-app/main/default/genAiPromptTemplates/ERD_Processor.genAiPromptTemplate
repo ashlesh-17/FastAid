@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>DI2uhlZl1LocyRYFrQQ2rxGdpHlTwTufX6FxnRwNCxY=_1</activeVersionIdentifier>
+    <description>This prompt template is used to return list of object and fields (lookup or master detail relations).</description>
+    <developerName>ERD_Processor</developerName>
+    <masterLabel>ERD Processor</masterLabel>
+    <templateVersions>
+        <content>You are a Salesforce Senior Developer. Please analyze the document to determine if it is an ERD Diagram
+If it is not, respond with error: Not an ERD Diagram.
+If it is, Please list down all the objects (Label, API name), fields and their relations considering legends/color in the image
+
+IMPORTANT:
+Return ONLY in below format, no markdown formatting and no code blocks.
+Make sure each connector is carefully documented.
+Do not create fields, objects and relations that are not present.
+
+Example:
+
+Account (Account)
+- Type (Picklist: Business, NGO)
+
+Tax Obligation (Tax_Obligation__c)
+- Account (Lookup relationship to Account)
+
+Payment (Payment__c)
+- Tax Obligation (Master-Detail relationship to Tax Obligation)
+- Amount (Currency)
+
+Declaration (Declaration__c)
+- Payment (Lookup relationship to Payment)
+- Tax Obligation (Master-Detail relationship to Tax Obligation)
+- Type (Picklist:Value1,Value2)
+
+Obligation Contact (Obligation_Contact__c)
+- Tax Obligation (Master-Detail relationship to Tax Obligation)
+- Account  (Master-Detail relationship to Account)
+- Description (Long Text Area)
+
+</content>
+        <inputs>
+            <apiName>Select_File</apiName>
+            <definition>SOBJECT://ContentDocument</definition>
+            <masterLabel>Select File</masterLabel>
+            <referenceName>Input:Select_File</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultGPT4Omni</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>DI2uhlZl1LocyRYFrQQ2rxGdpHlTwTufX6FxnRwNCxY=_1</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

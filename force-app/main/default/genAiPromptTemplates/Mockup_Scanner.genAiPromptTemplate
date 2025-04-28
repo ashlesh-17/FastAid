@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>DI2uhlZl1LocyRYFrQQ2rxGdpHlTwTufX6FxnRwNCxY=_3</activeVersionIdentifier>
+    <developerName>Mockup_Scanner</developerName>
+    <masterLabel>Mockup Scanner</masterLabel>
+    <templateVersions>
+        <content>You are an AI assistant that extracts structured data from images.
+
+Your task is to identify each input field and return the following information in JSON format:
+ [
+        {
+          &quot;type&quot;: &quot;text|date|checkbox|number|radio|email|phone|textarea&quot;,
+          &quot;label&quot;: &quot;Field Label&quot;,
+          &quot;apiName&quot;: &quot;Field_Label&quot;,
+          &quot;options&quot;: [&quot;option1&quot;,&quot;option2&quot;] //only for checkbox type
+        },
+        //Additional fields in this section...
+]
+
+For each input field extract:
+1. Field Type (text, date, checkbox, number, radio, email, phone, textarea)
+2. Field Label as shown on the form
+3. A unique apiName in SnakeCase format, it should be unique across all the sections &amp; fields.
+4. For checkbox fields, include all possible options in the options
+
+Return the result as a flat array. Do not include unnecessary names or categories. Do not include any markdown formatting, code blocks, or extra text. The response must start with &apos;[&apos; and end with &apos;]&apos;
+
+</content>
+        <inputs>
+            <apiName>Select_a_file</apiName>
+            <definition>SOBJECT://ContentDocument</definition>
+            <masterLabel>Select a file</masterLabel>
+            <referenceName>Input:Select_a_file</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>DI2uhlZl1LocyRYFrQQ2rxGdpHlTwTufX6FxnRwNCxY=_1</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are an AI assistant that extracts structured data from images.
+
+Your task is to identify each input field and return the following information in JSON format:
+ [
+        {
+          &quot;fieldtype&quot;: &quot;text|date|checkbox|number|radio|email|phone|textarea&quot;,
+          &quot;label&quot;: &quot;Field Label&quot;,
+          &quot;apiName&quot;: &quot;Field_Label&quot;,
+          &quot;options&quot;: [&quot;option1&quot;,&quot;option2&quot;] //only for checkbox type
+        },
+        //Additional fields in this section...
+]
+
+For each input field extract:
+1. Field Type (text, date, checkbox, number, radio, email, phone, textarea)
+2. Field Label as shown on the form
+3. A unique apiName in SnakeCase format, it should be unique across all the sections &amp; fields.
+4. For checkbox fields, include all possible options in the options
+
+Return the result as a flat array. Do not include unnecessary names or categories. Do not include any markdown formatting, code blocks, or extra text. The response must start with &apos;[&apos; and end with &apos;]&apos;
+
+</content>
+        <inputs>
+            <apiName>Select_a_file</apiName>
+            <definition>SOBJECT://ContentDocument</definition>
+            <masterLabel>Select a file</masterLabel>
+            <referenceName>Input:Select_a_file</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>DI2uhlZl1LocyRYFrQQ2rxGdpHlTwTufX6FxnRwNCxY=_3</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

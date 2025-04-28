@@ -1,36 +1,89 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>*</members>
+        <members>CallMetadataApi</members>
+        <members>CallMetadataApiTest</members>
+        <members>GetUserContext</members>
+        <members>GetUserContextTest</members>
+        <members>MdtWsdl</members>
+        <members>MdtWsdlTest</members>
+        <members>MetadataCreatorService</members>
+        <members>MetadataCreatorServiceTest</members>
+        <members>Subtask</members>
+        <members>SubtaskProcessorUtility</members>
+        <members>SubtaskProcessorUtilityTest</members>
+        <members>Wsdl</members>
+        <members>WsdlTest</members>
+        <members>XmlWriter</members>
+        <members>XmlWriterTest</members>
         <name>ApexClass</name>
     </types>
     <types>
-        <members>*</members>
-        <name>ApexComponent</name>
-    </types>
-    <types>
-        <members>*</members>
+        <members>getSoapApiSessionId</members>
         <name>ApexPage</name>
     </types>
     <types>
-        <members>*</members>
-        <name>ApexTestSuite</name>
+        <members>FastAid</members>
+        <name>CustomApplication</name>
     </types>
     <types>
-        <members>*</members>
-        <name>ApexTrigger</name>
+        <members>SessionId</members>
+        <name>CustomLabel</name>
     </types>
     <types>
-        <members>*</members>
-        <name>AuraDefinitionBundle</name>
+        <members>CustomLabels</members>
+        <name>CustomLabels</name>
     </types>
     <types>
-        <members>*</members>
-        <name>LightningComponentBundle</name>
+        <members>Subtask__c</members>
+        <members>User_Story__c</members>
+        <name>CustomObject</name>
     </types>
     <types>
-        <members>*</members>
-        <name>StaticResource</name>
+        <members>User_Story__c</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>Fast_Aid_UtilityBar</members>
+        <members>User_Story_Record_Page</members>
+        <name>FlexiPage</name>
+    </types>
+    <types>
+        <members>Extract_Details_From_ERD</members>
+        <members>Screen_Flow_Generator</members>
+        <members>Subtask_Generator</members>
+        <name>Flow</name>
+    </types>
+    <types>
+        <members>CallMetadataApi</members>
+        <members>GetUserContext</members>
+        <name>GenAiFunction</name>
+    </types>
+    <types>
+        <members>EmployeeCopilotPlanner</members>
+        <name>GenAiPlanner</name>
+    </types>
+    <types>
+        <members>ExplainAndModifyMetadata</members>
+        <name>GenAiPlugin</name>
+    </types>
+    <types>
+        <members>ERD_Processor</members>
+        <members>Mockup_Scanner</members>
+        <members>Screen_Flow_Generator</members>
+        <members>Subtask_Processor</members>
+        <name>GenAiPromptTemplate</name>
+    </types>
+    <types>
+        <members>Subtask__c-Subtask Layout</members>
+        <members>User_Story__c-User Story Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>User_Story__c.Extract_Details_from_ERD</members>
+        <members>User_Story__c.Generate_Subtask</members>
+        <members>User_Story__c.Scan_Mockup</members>
+        <name>QuickAction</name>
     </types>
     <version>63.0</version>
 </Package>

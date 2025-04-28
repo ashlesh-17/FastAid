@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <aiPluginUtterances>
+        <developerName>utterance_config0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>utterance_config0</masterLabel>
+        <utterance>- Show me all installed packages
+- What does this package do?
+- What custom fields do we have on the Account object?
+- How are our validation rules configured for Opportunity?
+- Which active Flows do we have and what do they do?</utterance>
+    </aiPluginUtterances>
+    <canEscalate>false</canEscalate>
+    <description>Use this topic when the user asks about Salesforce metadata components, requests information about installed packages, or needs to understand configuration.</description>
+    <developerName>ExplainAndModifyMetadata</developerName>
+    <genAiFunctions>
+        <functionName>GetUserContext</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>CallMetadataApi</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>Always follow this process when using this topic:
+1. Run the GetUserContext action to understand the user&apos;s environment.
+2. Identify which type of metadata the user is interested in.
+3. Use the CallMetadataApi action to retrieve or modify the metadata.
+4. Provide clear explanations of the metadata components and their configurations.
+5. Always validate metadata changes for potential impacts to existing functionality.</description>
+        <developerName>instruction_config0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_config0</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Explain and Modify Metadata</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Use this topic when the user asks about Salesforce metadata components, requests information about installed packages, or needs to understand configuration.</scope>
+</GenAiPlugin>

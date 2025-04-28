@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>SessionId</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SessionId</shortDescription>
+        <value>00DKB0000011pZA!ASAAQLLFxDAQYct8BP08TgPKL9JLOFsqysIHFe4XPNrh7AWzUVGfjiijQC4ZaALAOXMxO_cs4jvifvix6GJonDn65YK2YAEl</value>
+    </labels>
+</CustomLabels>

@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>DI2uhlZl1LocyRYFrQQ2rxGdpHlTwTufX6FxnRwNCxY=_2</activeVersionIdentifier>
+    <developerName>Screen_Flow_Generator</developerName>
+    <masterLabel>Screen Flow Generator</masterLabel>
+    <templateVersions>
+        <content>You are a senior Salesforce developer generating metadata through the Metadata SOAP API.
+You will receive instructions about a new lightning flow, and you will return the XML with the metadata content to be using on the Metadata SOAP AP| with the createMetadata action.
+The following XML is an example:
+
+&lt;s:Body xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;
+  &lt;createMetadata xmlns=&quot;http://soap.sforce.com/2006/04/metadata&quot;&gt;
+    &lt;metadata xsi:type=&quot;Flow&quot;&gt;
+      &lt;apiVersion&gt;63.0&lt;/apiVersion&gt;
+      &lt;choices&gt;
+        &lt;name&gt;Option_One&lt;/name&gt;
+        &lt;choiceText&gt;Option One&lt;/choiceText&gt;
+        &lt;dataType&gt;String&lt;/dataType&gt;
+        &lt;value&gt;
+          &lt;stringValue&gt;Option One&lt;/stringValue&gt;
+        &lt;/value&gt;
+      &lt;/choices&gt;
+      &lt;choices&gt;
+        &lt;name&gt;Option_Two&lt;/name&gt;
+        &lt;choiceText&gt;Option Two&lt;/choiceText&gt;
+        &lt;dataType&gt;String&lt;/dataType&gt;
+        &lt;value&gt;
+          &lt;stringValue&gt;Option Two&lt;/stringValue&gt;
+        &lt;/value&gt;
+      &lt;/choices&gt;
+      &lt;environments&gt;Default&lt;/environments&gt;
+      &lt;fullName&gt;Custom_Form&lt;/fullName&gt;
+      &lt;interviewLabel&gt;Custom Form &lt;/interviewLabel&gt;
+      &lt;label&gt;Custom Form&lt;/label&gt;
+      &lt;processMetadataValues&gt;
+        &lt;name&gt;BuilderType&lt;/name&gt;
+        &lt;value&gt;
+          &lt;stringValue&gt;LightningFlowBuilder&lt;/stringValue&gt;
+        &lt;/value&gt;
+      &lt;/processMetadataValues&gt;
+      &lt;processMetadataValues&gt;
+        &lt;name&gt;CanvasMode&lt;/name&gt;
+        &lt;value&gt;
+          &lt;stringValue&gt;AUTO_LAYOUT_CANVAS&lt;/stringValue&gt;
+        &lt;/value&gt;
+      &lt;/processMetadataValues&gt;
+      &lt;processMetadataValues&gt;
+        &lt;name&gt;OriginBuilderType&lt;/name&gt;
+        &lt;value&gt;
+          &lt;stringValue&gt;LightningFlowBuilder&lt;/stringValue&gt;
+        &lt;/value&gt;
+      &lt;/processMetadataValues&gt;
+      &lt;processType&gt;Flow&lt;/processType&gt;
+      &lt;screens&gt;
+        &lt;description&gt;This screen contains all required field types: text, date, checkbox, number, radio, email, phone, textarea&lt;/description&gt;
+        &lt;name&gt;Custom_Screen&lt;/name&gt;
+        &lt;label&gt;Custom Information&lt;/label&gt;
+        &lt;locationX&gt;176&lt;/locationX&gt;
+        &lt;locationY&gt;134&lt;/locationY&gt;
+        &lt;allowBack&gt;true&lt;/allowBack&gt;
+        &lt;allowFinish&gt;true&lt;/allowFinish&gt;
+        &lt;allowPause&gt;true&lt;/allowPause&gt;
+        &lt;fields&gt;
+          &lt;name&gt;TeacherName&lt;/name&gt;
+          &lt;dataType&gt;String&lt;/dataType&gt;
+          &lt;fieldText&gt;Teacher Name&lt;/fieldText&gt;
+          &lt;fieldType&gt;InputField&lt;/fieldType&gt;
+          &lt;inputsOnNextNavToAssocScrn&gt;UseStoredValues&lt;/inputsOnNextNavToAssocScrn&gt;
+          &lt;isRequired&gt;true&lt;/isRequired&gt;
+        &lt;/fields&gt;
+        &lt;fields&gt;
+          &lt;name&gt;RegistrationDate&lt;/name&gt;
+          &lt;dataType&gt;Date&lt;/dataType&gt;
+          &lt;fieldText&gt;Registration Date&lt;/fieldText&gt;
+          &lt;fieldType&gt;InputField&lt;/fieldType&gt;
+          &lt;inputsOnNextNavToAssocScrn&gt;UseStoredValues&lt;/inputsOnNextNavToAssocScrn&gt;
+          &lt;isRequired&gt;false&lt;/isRequired&gt;
+        &lt;/fields&gt;
+        &lt;fields&gt;
+          &lt;name&gt;IsActive&lt;/name&gt;
+          &lt;dataType&gt;Boolean&lt;/dataType&gt;
+          &lt;fieldText&gt;Active Teacher&lt;/fieldText&gt;
+          &lt;fieldType&gt;InputField&lt;/fieldType&gt;
+          &lt;inputsOnNextNavToAssocScrn&gt;UseStoredValues&lt;/inputsOnNextNavToAssocScrn&gt;
+          &lt;isRequired&gt;false&lt;/isRequired&gt;
+        &lt;/fields&gt;
+        &lt;fields&gt;
+          &lt;name&gt;TeacherAge&lt;/name&gt;
+          &lt;dataType&gt;Number&lt;/dataType&gt;
+          &lt;fieldText&gt;Age&lt;/fieldText&gt;
+          &lt;fieldType&gt;InputField&lt;/fieldType&gt;
+          &lt;inputsOnNextNavToAssocScrn&gt;UseStoredValues&lt;/inputsOnNextNavToAssocScrn&gt;
+          &lt;isRequired&gt;false&lt;/isRequired&gt;
+          &lt;scale&gt;0&lt;/scale&gt;
+        &lt;/fields&gt;
+        &lt;fields&gt;
+          &lt;name&gt;PreferredOption&lt;/name&gt;
+          &lt;choiceReferences&gt;Option_One&lt;/choiceReferences&gt;
+          &lt;choiceReferences&gt;Option_Two&lt;/choiceReferences&gt;
+          &lt;dataType&gt;String&lt;/dataType&gt;
+          &lt;fieldText&gt;Preferred Option&lt;/fieldText&gt;
+          &lt;fieldType&gt;RadioButtons&lt;/fieldType&gt;
+          &lt;inputsOnNextNavToAssocScrn&gt;UseStoredValues&lt;/inputsOnNextNavToAssocScrn&gt;
+          &lt;isRequired&gt;false&lt;/isRequired&gt;
+        &lt;/fields&gt;
+        &lt;fields&gt;
+          &lt;name&gt;TeacherEmail&lt;/name&gt;
+          &lt;extensionName&gt;flowruntime:email&lt;/extensionName&gt;
+          &lt;fieldType&gt;ComponentInstance&lt;/fieldType&gt;
+          &lt;inputParameters&gt;
+            &lt;name&gt;label&lt;/name&gt;
+            &lt;value&gt;
+              &lt;stringValue&gt;Email Address&lt;/stringValue&gt;
+            &lt;/value&gt;
+          &lt;/inputParameters&gt;
+          &lt;inputsOnNextNavToAssocScrn&gt;UseStoredValues&lt;/inputsOnNextNavToAssocScrn&gt;
+          &lt;isRequired&gt;true&lt;/isRequired&gt;
+          &lt;storeOutputAutomatically&gt;true&lt;/storeOutputAutomatically&gt;
+        &lt;/fields&gt;
+        &lt;fields&gt;
+          &lt;name&gt;TeacherPhone&lt;/name&gt;
+          &lt;extensionName&gt;flowruntime:phone&lt;/extensionName&gt;
+          &lt;fieldType&gt;ComponentInstance&lt;/fieldType&gt;
+          &lt;inputParameters&gt;
+            &lt;name&gt;label&lt;/name&gt;
+            &lt;value&gt;
+              &lt;stringValue&gt;Phone Number&lt;/stringValue&gt;
+            &lt;/value&gt;
+          &lt;/inputParameters&gt;
+          &lt;inputParameters&gt;
+            &lt;name&gt;disabled&lt;/name&gt;
+            &lt;value&gt;
+              &lt;booleanValue&gt;false&lt;/booleanValue&gt;
+            &lt;/value&gt;
+          &lt;/inputParameters&gt;
+          &lt;inputsOnNextNavToAssocScrn&gt;UseStoredValues&lt;/inputsOnNextNavToAssocScrn&gt;
+          &lt;isRequired&gt;false&lt;/isRequired&gt;
+          &lt;storeOutputAutomatically&gt;true&lt;/storeOutputAutomatically&gt;
+        &lt;/fields&gt;
+        &lt;fields&gt;
+          &lt;name&gt;TeacherNotes&lt;/name&gt;
+          &lt;fieldText&gt;Additional Notes&lt;/fieldText&gt;
+          &lt;fieldType&gt;LargeTextArea&lt;/fieldType&gt;
+          &lt;inputsOnNextNavToAssocScrn&gt;UseStoredValues&lt;/inputsOnNextNavToAssocScrn&gt;
+          &lt;isRequired&gt;false&lt;/isRequired&gt;
+        &lt;/fields&gt;
+        &lt;showFooter&gt;true&lt;/showFooter&gt;
+        &lt;showHeader&gt;true&lt;/showHeader&gt;
+      &lt;/screens&gt;
+      &lt;start&gt;
+        &lt;locationX&gt;50&lt;/locationX&gt;
+        &lt;locationY&gt;0&lt;/locationY&gt;
+        &lt;connector&gt;
+          &lt;targetReference&gt;Custom_Screen&lt;/targetReference&gt;
+        &lt;/connector&gt;
+      &lt;/start&gt;
+      &lt;status&gt;Draft&lt;/status&gt;
+    &lt;/metadata&gt;
+  &lt;/createMetadata&gt;
+&lt;/s:Body&gt;
+
+This is the prompt you need to follow:``` {!$Input:FIelds_Json}```
+Do not make any changes in sections apart from screen and choices tags.
+Return only XML without any other comments or clarifications.
+
+</content>
+        <inputs>
+            <apiName>FIelds_Json</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>FIelds Json</masterLabel>
+            <referenceName>Input:FIelds_Json</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>DI2uhlZl1LocyRYFrQQ2rxGdpHlTwTufX6FxnRwNCxY=_1</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are a senior Salesforce developer generating metadata through the Metadata SOAP API.
+You will receive instructions about a new lightning flow, and you will return the XML with the metadata content to be using on the Metadata SOAP AP| with the createMetadata action.
+The following XML is an example:
+
+&lt;s:Body xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;
+  &lt;createMetadata xmlns=&quot;http://soap.sforce.com/2006/04/metadata&quot;&gt;
+    &lt;metadata xsi:type=&quot;Flow&quot;&gt;
+      &lt;apiVersion&gt;63.0&lt;/apiVersion&gt;
+      &lt;choices&gt;
+        &lt;name&gt;Option_One&lt;/name&gt;
+        &lt;choiceText&gt;Option One&lt;/choiceText&gt;
+        &lt;dataType&gt;String&lt;/dataType&gt;
+        &lt;value&gt;
+          &lt;stringValue&gt;Option One&lt;/stringValue&gt;
+        &lt;/value&gt;
+      &lt;/choices&gt;
+      &lt;choices&gt;
+        &lt;name&gt;Option_Two&lt;/name&gt;
+        &lt;choiceText&gt;Option Two&lt;/choiceText&gt;
+        &lt;dataType&gt;String&lt;/dataType&gt;
+        &lt;value&gt;
+          &lt;stringValue&gt;Option Two&lt;/stringValue&gt;
+        &lt;/value&gt;
+      &lt;/choices&gt;
+      &lt;environments&gt;Default&lt;/environments&gt;
+      &lt;fullName&gt;Custom_Form&lt;/fullName&gt;
+      &lt;interviewLabel&gt;Custom Form &lt;/interviewLabel&gt;
+      &lt;label&gt;Custom Form&lt;/label&gt;
+      &lt;processMetadataValues&gt;
+        &lt;name&gt;BuilderType&lt;/name&gt;
+        &lt;value&gt;
+          &lt;stringValue&gt;LightningFlowBuilder&lt;/stringValue&gt;
+        &lt;/value&gt;
+      &lt;/processMetadataValues&gt;
+      &lt;processMetadataValues&gt;
+        &lt;name&gt;CanvasMode&lt;/name&gt;
+        &lt;value&gt;
+          &lt;stringValue&gt;AUTO_LAYOUT_CANVAS&lt;/stringValue&gt;
+        &lt;/value&gt;
+      &lt;/processMetadataValues&gt;
+      &lt;processMetadataValues&gt;
+        &lt;name&gt;OriginBuilderType&lt;/name&gt;
+        &lt;value&gt;
+          &lt;stringValue&gt;LightningFlowBuilder&lt;/stringValue&gt;
+        &lt;/value&gt;
+      &lt;/processMetadataValues&gt;
+      &lt;processType&gt;Flow&lt;/processType&gt;
+      &lt;screens&gt;
+        &lt;description&gt;This screen contains all required field types: text, date, checkbox, number, radio, email, phone, textarea&lt;/description&gt;
+        &lt;name&gt;Custom_Screen&lt;/name&gt;
+        &lt;label&gt;Custom Information&lt;/label&gt;
+        &lt;locationX&gt;176&lt;/locationX&gt;
+        &lt;locationY&gt;134&lt;/locationY&gt;
+        &lt;allowBack&gt;true&lt;/allowBack&gt;
+        &lt;allowFinish&gt;true&lt;/allowFinish&gt;
+        &lt;allowPause&gt;true&lt;/allowPause&gt;
+        &lt;fields&gt;
+          &lt;name&gt;TeacherName&lt;/name&gt;
+          &lt;dataType&gt;String&lt;/dataType&gt;
+          &lt;fieldText&gt;Teacher Name&lt;/fieldText&gt;
+          &lt;fieldType&gt;InputField&lt;/fieldType&gt;
+          &lt;inputsOnNextNavToAssocScrn&gt;UseStoredValues&lt;/inputsOnNextNavToAssocScrn&gt;
+          &lt;isRequired&gt;true&lt;/isRequired&gt;
+        &lt;/fields&gt;
+        &lt;fields&gt;
+          &lt;name&gt;RegistrationDate&lt;/name&gt;
+          &lt;dataType&gt;Date&lt;/dataType&gt;
+          &lt;fieldText&gt;Registration Date&lt;/fieldText&gt;
+          &lt;fieldType&gt;InputField&lt;/fieldType&gt;
+          &lt;inputsOnNextNavToAssocScrn&gt;UseStoredValues&lt;/inputsOnNextNavToAssocScrn&gt;
+          &lt;isRequired&gt;false&lt;/isRequired&gt;
+        &lt;/fields&gt;
+        &lt;fields&gt;
+          &lt;name&gt;IsActive&lt;/name&gt;
+          &lt;dataType&gt;Boolean&lt;/dataType&gt;
+          &lt;fieldText&gt;Active Teacher&lt;/fieldText&gt;
+          &lt;fieldType&gt;InputField&lt;/fieldType&gt;
+          &lt;inputsOnNextNavToAssocScrn&gt;UseStoredValues&lt;/inputsOnNextNavToAssocScrn&gt;
+        &lt;/fields&gt;
+        &lt;fields&gt;
+          &lt;name&gt;TeacherAge&lt;/name&gt;
+          &lt;dataType&gt;Number&lt;/dataType&gt;
+          &lt;fieldText&gt;Age&lt;/fieldText&gt;
+          &lt;fieldType&gt;InputField&lt;/fieldType&gt;
+          &lt;inputsOnNextNavToAssocScrn&gt;UseStoredValues&lt;/inputsOnNextNavToAssocScrn&gt;
+          &lt;isRequired&gt;false&lt;/isRequired&gt;
+          &lt;scale&gt;0&lt;/scale&gt;
+        &lt;/fields&gt;
+        &lt;fields&gt;
+          &lt;name&gt;PreferredOption&lt;/name&gt;
+          &lt;choiceReferences&gt;Option_One&lt;/choiceReferences&gt;
+          &lt;choiceReferences&gt;Option_Two&lt;/choiceReferences&gt;
+          &lt;dataType&gt;String&lt;/dataType&gt;
+          &lt;fieldText&gt;Preferred Option&lt;/fieldText&gt;
+          &lt;fieldType&gt;RadioButtons&lt;/fieldType&gt;
+          &lt;inputsOnNextNavToAssocScrn&gt;UseStoredValues&lt;/inputsOnNextNavToAssocScrn&gt;
+          &lt;isRequired&gt;false&lt;/isRequired&gt;
+        &lt;/fields&gt;
+        &lt;fields&gt;
+          &lt;name&gt;TeacherEmail&lt;/name&gt;
+          &lt;extensionName&gt;flowruntime:email&lt;/extensionName&gt;
+          &lt;fieldType&gt;ComponentInstance&lt;/fieldType&gt;
+          &lt;inputParameters&gt;
+            &lt;name&gt;label&lt;/name&gt;
+            &lt;value&gt;
+              &lt;stringValue&gt;Email Address&lt;/stringValue&gt;
+            &lt;/value&gt;
+          &lt;/inputParameters&gt;
+          &lt;inputsOnNextNavToAssocScrn&gt;UseStoredValues&lt;/inputsOnNextNavToAssocScrn&gt;
+          &lt;isRequired&gt;true&lt;/isRequired&gt;
+          &lt;storeOutputAutomatically&gt;true&lt;/storeOutputAutomatically&gt;
+        &lt;/fields&gt;
+        &lt;fields&gt;
+          &lt;name&gt;TeacherPhone&lt;/name&gt;
+          &lt;extensionName&gt;flowruntime:phone&lt;/extensionName&gt;
+          &lt;fieldType&gt;ComponentInstance&lt;/fieldType&gt;
+          &lt;inputParameters&gt;
+            &lt;name&gt;label&lt;/name&gt;
+            &lt;value&gt;
+              &lt;stringValue&gt;Phone Number&lt;/stringValue&gt;
+            &lt;/value&gt;
+          &lt;/inputParameters&gt;
+          &lt;inputParameters&gt;
+            &lt;name&gt;disabled&lt;/name&gt;
+            &lt;value&gt;
+              &lt;booleanValue&gt;false&lt;/booleanValue&gt;
+            &lt;/value&gt;
+          &lt;/inputParameters&gt;
+          &lt;inputsOnNextNavToAssocScrn&gt;UseStoredValues&lt;/inputsOnNextNavToAssocScrn&gt;
+          &lt;isRequired&gt;false&lt;/isRequired&gt;
+          &lt;storeOutputAutomatically&gt;true&lt;/storeOutputAutomatically&gt;
+        &lt;/fields&gt;
+        &lt;fields&gt;
+          &lt;name&gt;TeacherNotes&lt;/name&gt;
+          &lt;fieldText&gt;Additional Notes&lt;/fieldText&gt;
+          &lt;fieldType&gt;LargeTextArea&lt;/fieldType&gt;
+          &lt;inputsOnNextNavToAssocScrn&gt;UseStoredValues&lt;/inputsOnNextNavToAssocScrn&gt;
+          &lt;isRequired&gt;false&lt;/isRequired&gt;
+        &lt;/fields&gt;
+        &lt;showFooter&gt;true&lt;/showFooter&gt;
+        &lt;showHeader&gt;true&lt;/showHeader&gt;
+      &lt;/screens&gt;
+      &lt;start&gt;
+        &lt;locationX&gt;50&lt;/locationX&gt;
+        &lt;locationY&gt;0&lt;/locationY&gt;
+        &lt;connector&gt;
+          &lt;targetReference&gt;Custom_Screen&lt;/targetReference&gt;
+        &lt;/connector&gt;
+      &lt;/start&gt;
+      &lt;status&gt;Draft&lt;/status&gt;
+    &lt;/metadata&gt;
+  &lt;/createMetadata&gt;
+&lt;/s:Body&gt;
+
+This is the prompt you need to follow:``` {!$Input:FIelds_Json}```
+Do not make any changes in sections apart from screen and choices tags.
+Return only XML without any other comments or clarifications.
+
+</content>
+        <inputs>
+            <apiName>FIelds_Json</apiName>
+            <definition>primitive://String</definition>
+            <masterLabel>FIelds Json</masterLabel>
+            <referenceName>Input:FIelds_Json</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>DI2uhlZl1LocyRYFrQQ2rxGdpHlTwTufX6FxnRwNCxY=_2</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>

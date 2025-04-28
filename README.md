@@ -1,18 +1,47 @@
-# Salesforce DX Project: Next Steps
+# FastAid
+A Salesforce-powered solution designed to streamline administrative and development workflows, helping teams work more efficiently.
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+## 🚀 About FastAid
+FastAid is a Salesforce application that leverages the power of Agentforce Agents and Einstein AI to provide intelligent assistance and automation for administrators and developers. By utilizing Prompt Templates and Topics, it delivers context-aware responses and actions to help users work more efficiently within their Salesforce org.
 
-## How Do You Plan to Deploy Your Changes?
+## ⚠️ Disclaimer
+This project was developed during a 3-day hackathon. While we've strived for quality and functionality, you might encounter some rough edges or areas that could be improved. We welcome constructive feedback and suggestions for enhancement. Please be kind in your reviews! 😊
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+## 🛠️ Technical Stack
+- Salesforce Agentforce Agents
+- Einstein AI Integration
+- Prompt Templates
+- Topics and Actions
+- Custom Labels and Settings
+- Salesforce Platform
 
-## Configure Your Salesforce DX Project
+## 📋 Pre-Deployment Steps
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+1. **Enable Einstein AI**
+   - Navigate to Setup
+   - Search for "Einstein Setup"
+   - Turn on Einstein AI
 
-## Read All About It
+2. **Configure Agentforce**
+   - Navigate to Setup
+   - Search for "Agentforce Agents"
+   - Turn on Agentforce
+   - Enable the "Agentforce (Default) Agent"
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+3. **Update Session ID**
+   - Navigate to Setup
+   - Search for "Custom Labels"
+   - Update the "SessionId" label with your session ID
+
+## 🚀 Deployment Steps
+
+- Deploy the package.xml to your org.
+
+## 🔧 Development Setup
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Run tests: `npm test`
+4. Format code: `npm run prettier`
+
+## 📝 License
+This project is licensed under the terms specified in the LICENSE file.

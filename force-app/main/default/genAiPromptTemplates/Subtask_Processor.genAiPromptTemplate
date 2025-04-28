@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionIdentifier>DI2uhlZl1LocyRYFrQQ2rxGdpHlTwTufX6FxnRwNCxY=_3</activeVersionIdentifier>
+    <developerName>Subtask_Processor</developerName>
+    <masterLabel>Subtask Processor</masterLabel>
+    <templateVersions>
+        <content>You are an AI assistant that extracts structured data from long text area (rich text)
+
+Your task is to analyze {!$Input:User_Story.Acceptance_Criteria__c} and identify each subtask and return the following information in JSON format:
+- &quot;name&quot;: Name of Metadata to be created
+- &quot; description&quot;: Short description of required attribute
+
+IMPORTANT:
+Return the result as a flat array of Subtasks consisting of name and description where name = task and description = details of component to be created,
+
+Here&apos;s the output format:
+
+[
+{
+ &quot;name&quot;: &quot;Custom Object &amp; Fields Creation&quot;,
+ &quot;description&quot;: &quot;&lt;p&gt;&lt;span style=\&quot;font-size: 12pt; background-color: transparent;\&quot;&gt; &lt;/span&gt;&lt;span&gt;Account (Account)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;- Type (Picklist: Independent, ISVs, Reseller, Consulting)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;- Maximum Reps Capacity (Number)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&quot;
+},
+{
+ &quot;name&quot;: &quot;Report Creation&quot;,
+ &quot;description&quot;: &quot;&lt;ul&gt;&lt;li&gt;&lt;span&gt;Name: &amp;quot;My Simple OpportunityReport&amp;quot;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;Folder: &amp;quot;unfiled$public&amp;quot; (PublicReports)&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;Report Type:&amp;quot;Opportunity&amp;quot;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;Format: &amp;quot;Tabular&amp;quot;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;Columns: &amp;quot;Name&amp;quot;,&amp;quot;Amount&amp;quot;, &amp;quot;CloseDate&amp;quot;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;Description: &amp;quot;A basic report listingall opportunities with their name, amount, and close date.&amp;quot;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;No filters or groupings required.&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&quot;
+}
+]
+
+Now extract the menu items from the attached image and respond with JSON. Do not include any markdown formatting, code blocks, or extra text. The response must start with &apos;[&apos; and end with &apos;]&apos;
+</content>
+        <inputs>
+            <apiName>User_Story</apiName>
+            <definition>SOBJECT://User_Story__c</definition>
+            <masterLabel>User Story</masterLabel>
+            <referenceName>Input:User_Story</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>DI2uhlZl1LocyRYFrQQ2rxGdpHlTwTufX6FxnRwNCxY=_1</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are an AI assistant that extracts structured data from long text area (rich text)
+
+Your task is to analyze {!$Input:User_Story.Acceptance_Criteria__c} and identify each subtask and return the following information in JSON format:
+- &quot;name&quot;: Name of Metadata to be created
+- &quot; description&quot;: Component detail and Short description of required attribute
+
+IMPORTANT:
+Return the result as a flat array of Subtasks consisting of name and description where name = task and description = details of component to be created.
+Do not miss the component details
+
+Here&apos;s the output format:
+
+[
+{
+ &quot;name&quot;: &quot;Custom Object &amp; Fields Creation&quot;,
+ &quot;description&quot;: &quot;&lt;p&gt;&lt;span style=\&quot;font-size: 12pt; background-color: transparent;\&quot;&gt; &lt;/span&gt;&lt;span&gt;Account (Account)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;- Type (Picklist: Independent, ISVs, Reseller, Consulting)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;- Maximum Reps Capacity (Number)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&quot;
+},
+{
+ &quot;name&quot;: &quot;Report Creation&quot;,
+ &quot;description&quot;: &quot;&lt;ul&gt;&lt;li&gt;&lt;span&gt;Name: &amp;quot;My Simple OpportunityReport&amp;quot;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;Folder: &amp;quot;unfiled$public&amp;quot; (PublicReports)&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;Report Type:&amp;quot;Opportunity&amp;quot;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;Format: &amp;quot;Tabular&amp;quot;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;Columns: &amp;quot;Name&amp;quot;,&amp;quot;Amount&amp;quot;, &amp;quot;CloseDate&amp;quot;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;Description: &amp;quot;A basic report listingall opportunities with their name, amount, and close date.&amp;quot;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;No filters or groupings required.&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&quot;
+}
+]
+
+Now extract the subtasks and respond with JSON. Do not include any markdown formatting, code blocks, or extra text. The response must start with &apos;[&apos; and end with &apos;]&apos;
+</content>
+        <inputs>
+            <apiName>User_Story</apiName>
+            <definition>SOBJECT://User_Story__c</definition>
+            <masterLabel>User Story</masterLabel>
+            <referenceName>Input:User_Story</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>DI2uhlZl1LocyRYFrQQ2rxGdpHlTwTufX6FxnRwNCxY=_2</versionIdentifier>
+    </templateVersions>
+    <templateVersions>
+        <content>You are an AI assistant that extracts structured data and instruction from long text area (rich text)
+
+Your task is to analyze {!$Input:User_Story.Acceptance_Criteria__c} and identify each subtask and return the following information in JSON format:
+- &quot;name&quot;: Name of Metadata to be created
+- &quot; description&quot;: Starts with &apos;Please create...&apos; Component detail and Short description of required attribute
+
+IMPORTANT:
+Return the result as a flat array of Subtasks consisting of name and description where name = task and description = details of component to be created.
+Do not miss the component details
+
+Here&apos;s the output format:
+
+[
+{
+ &quot;name&quot;: &quot;Custom Object &amp; Fields Creation&quot;,
+ &quot;description&quot;: &quot;Please create custom object &amp; fields mentioned below: &lt;br&gt;&lt;p&gt;&lt;span style=\&quot;font-size: 12pt; background-color: transparent;\&quot;&gt; &lt;/span&gt;&lt;span&gt;Account (Account)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;- Type (Picklist: Independent, ISVs, Reseller, Consulting)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;- Maximum Reps Capacity (Number)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&quot;
+},
+{
+ &quot;name&quot;: &quot;Report Creation&quot;,
+ &quot;description&quot;: &quot;Please create a report (My Simple OpportunityReport) with below details: &lt;br&gt;&lt;ul&gt;&lt;li&gt;&lt;span&gt;Name: &amp;quot;My Simple OpportunityReport&amp;quot;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;Folder: &amp;quot;unfiled$public&amp;quot; (PublicReports)&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;Report Type:&amp;quot;Opportunity&amp;quot;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;Format: &amp;quot;Tabular&amp;quot;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;Columns: &amp;quot;Name&amp;quot;,&amp;quot;Amount&amp;quot;, &amp;quot;CloseDate&amp;quot;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;Description: &amp;quot;A basic report listingall opportunities with their name, amount, and close date.&amp;quot;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span&gt;No filters or groupings required.&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;&quot;
+}
+]
+
+Now extract the subtasks and respond with JSON. Do not include any markdown formatting, code blocks, or extra text. The response must start with &apos;[&apos; and end with &apos;]&apos;
+</content>
+        <inputs>
+            <apiName>User_Story</apiName>
+            <definition>SOBJECT://User_Story__c</definition>
+            <masterLabel>User Story</masterLabel>
+            <referenceName>Input:User_Story</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT4OmniMini</primaryModel>
+        <status>Published</status>
+        <versionIdentifier>DI2uhlZl1LocyRYFrQQ2rxGdpHlTwTufX6FxnRwNCxY=_3</versionIdentifier>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>
